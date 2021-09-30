@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Menu } from '../models/Menu';
 import { DataService, Message } from '../services/data.service';
 
 @Component({
@@ -7,7 +8,14 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  menu: any;
+  defaultSegment: string;
+
   constructor(private data: DataService) {}
+
+  ngOnInit(): void {
+    this.getMenu();
+  }
 
   refresh(ev) {
     setTimeout(() => {
@@ -15,8 +23,15 @@ export class HomePage {
     }, 3000);
   }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
+  getMenu(): Menu[] {
+    return this.data.getMenuItems().subscribe(data => {
+      this.menu = data.categories;
+      this.defaultSegment = this.menu[1].categoryName;
+    });
+  }
+
+  segmentChanged(ev: any): void {
+    console.log('Segment changed', ev);
   }
 
 }

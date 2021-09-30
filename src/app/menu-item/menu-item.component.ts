@@ -1,17 +1,18 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Menu } from '../models/Menu';
 import { Message } from '../services/data.service';
 
 @Component({
-  selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.scss'],
+  selector: 'menu-item',
+  templateUrl: './menu-item.component.html',
+  styleUrls: ['./menu-item.component.scss'],
 })
-export class MessageComponent implements OnInit {
-  @Input() message: Message;
+export class MenuItemComponent implements OnInit {
+  @Input() menu: Menu;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   isIos() {
     const win = window as any;
