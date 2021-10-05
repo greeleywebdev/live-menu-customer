@@ -8,10 +8,12 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  menu: any;
+  menu: any[];
+  shownMenu: any;
   defaultSegment: string;
+  activeSegment: string;
 
-  constructor(private data: DataService) {}
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
     this.getMenu();
@@ -27,11 +29,18 @@ export class HomePage {
     return this.data.getMenuItems().subscribe(data => {
       this.menu = data.categories;
       this.defaultSegment = this.menu[1].categoryName;
+      this.activeSegment = this.defaultSegment;
+      this.shownMenu = this.menu[1].categoryList;
     });
   }
 
   segmentChanged(ev: any): void {
-    console.log('Segment changed', ev);
+    this.activeSegment = ev.detail.value;
+    for (var i in this.menu) {
+      if (this.activeSegment === this.menu[i].categoryName) {
+        this.shownMenu = this.menu[i].categoryList
+      }
+    }
   }
 
 }

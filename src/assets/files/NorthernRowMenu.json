@@ -1,4 +1,4 @@
-[
+
     {
         "locationId": 1,
         "categories": [
@@ -345,21 +345,21 @@
                             },
                             {
                                 "menuItemId": 1,
-                                "header": "",
-                                "subHeader": null,
-                                "price": "$6.00",
-                                "subCategory1": "%",
-                                "subCategory2": " IBU",
-                                "description": "",
-                                "photoLocation": null
-                            },
-                            {
-                                "menuItemId": 1,
                                 "header": "BUTCHER",
                                 "subHeader": "Pilsner",
                                 "price": "$6.00",
                                 "subCategory1": "5.6%",
                                 "subCategory2": "30 IBU",
+                                "description": "German amber lager, nutty, toasty and caramelly Festbier. malt character.",
+                                "photoLocation": null
+                            },
+                            {
+                                "menuItemId": 1,
+                                "header": "BREWER",
+                                "subHeader": "Oktoberfest / Marzen",
+                                "price": "$6.00",
+                                "subCategory1": "5.8%",
+                                "subCategory2": "19 IBU",
                                 "description": "German amber lager, nutty, toasty and caramelly Festbier. malt character.",
                                 "photoLocation": null
                             }
@@ -899,4 +899,3 @@
             }
         ]
     }
-]

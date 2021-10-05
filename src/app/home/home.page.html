@@ -3,10 +3,15 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-segment (ionChange)="segmentChanged($event)" color="primary" mode="ios" scrollable="true" value="{{defaultSegment}}">
+  <ion-segment (ionChange)="segmentChanged($event)" color="primary" mode="ios" scrollable="true"
+    value="{{defaultSegment}}">
     <ion-segment-button *ngFor="let category of menu" value="{{category.categoryName}}">
       <ion-label>{{category.categoryName}}</ion-label>
     </ion-segment-button>
   </ion-segment>
-  
+
+  <div *ngFor="let section of shownMenu" menu>
+    <ion-label section-header color="primary">{{section.section}}</ion-label>
+    <menu-item *ngIf="shownMenu" [menu]="section.sectionList"></menu-item>
+  </div>
 </ion-content>

@@ -1,59 +1,40 @@
-ion-item {
-  --padding-start: 0;
-  --inner-padding-end: 0;
-}
-
-ion-label {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-ion-item h2 {
-  font-weight: 600;
+[header] {
+  font-family: "Arvo";
+  font-size: 14pt;
   margin: 0;
 }
 
-ion-item p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 95%;
+[subhead] {
+  font-family: "Arvo";
+  font-size: 13pt;
+  margin-top: -6px;
 }
 
-ion-item .date {
+[price] {
+  font-family: "Lato", sans-serif;
+  font-size: 13pt;
+  font-style: oblique;
   float: right;
-  align-items: center;
-  display: flex;
-}
-
-ion-item ion-icon {
-  color: #c9c9ca;
-}
-
-ion-item ion-note {
-  font-size: 15px;
+  margin-top: 8px;
   margin-right: 8px;
-  font-weight: normal;
 }
 
-ion-item ion-note.md {
-  margin-right: 14px;
+[sub-category] {
+  font-family: "Lato";
+  font-size: 11pt;
+  &[spacing] {
+  padding-left: 12px;
+  }
 }
 
-.dot {
-  display: block;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  align-self: start;
-  margin: 16px 10px 16px 16px;
+[description] {
+  font-family: "Lato";
+  // color: $secondary;
+  font-size: 11pt;
+  margin-top: 4px;
 }
 
-.dot-unread {
-  background: var(--ion-color-primary);
-}
-
-ion-footer ion-title {
-  font-size: 11px;
-  font-weight: normal;
+[seperator] {
+  color: rgba(151, 151, 151, 50);
+  margin-top: 12px;
 }
