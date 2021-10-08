@@ -1,0 +1,40 @@
+[header] {
+  font-family: "Arvo";
+  font-size: 14pt;
+  margin: 0;
+}
+
+[subhead] {
+  font-family: "Arvo";
+  font-size: 13pt;
+  margin-top: -6px;
+}
+
+[price] {
+  font-family: "Lato", sans-serif;
+  font-size: 13pt;
+  font-style: oblique;
+  float: right;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+[sub-category] {
+  font-family: "Lato";
+  font-size: 11pt;
+  &[spacing] {
+  padding-left: 12px;
+  }
+}
+
+[description] {
+  font-family: "Lato";
+  // color: $secondary;
+  font-size: 11pt;
+  margin-top: 4px;
+}
+
+[seperator] {
+  color: rgba(151, 151, 151, 50);
+  margin-top: 12px;
+}

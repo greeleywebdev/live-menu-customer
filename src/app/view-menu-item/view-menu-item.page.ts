@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { DataService, Message } from '../services/data.service';
 
 @Component({
-  selector: 'app-view-message',
-  templateUrl: './view-message.page.html',
-  styleUrls: ['./view-message.page.scss'],
+  selector: 'view-menu-item',
+  templateUrl: './view-menu-item.page.html',
+  styleUrls: ['./view-menu-item.page.scss'],
 })
-export class ViewMessagePage implements OnInit {
+export class ViewMenuItemPage implements OnInit {
   public message: Message;
 
   constructor(
@@ -16,8 +16,8 @@ export class ViewMessagePage implements OnInit {
   ) { }
 
   ngOnInit() {
+    // This gets id from url?
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.message = this.data.getMessageById(parseInt(id, 10));
   }
 
   getBackButtonText() {
