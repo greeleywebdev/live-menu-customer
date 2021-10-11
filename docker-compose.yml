@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  live-menu:
+    container_name: live-menu-frontend
+    build: .
+    ports:
+      - "4200:80"
