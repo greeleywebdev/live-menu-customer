@@ -11,3 +11,8 @@
 menu-item {
     margin-top: 16px;
 }
+
+[no-border] {
+    margin-bottom: 16px;
+    --border-style: none;
+}

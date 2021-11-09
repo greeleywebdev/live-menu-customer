@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService, Message } from '../services/data.service';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'view-menu-item',
@@ -8,7 +8,6 @@ import { DataService, Message } from '../services/data.service';
   styleUrls: ['./view-menu-item.page.scss'],
 })
 export class ViewMenuItemPage implements OnInit {
-  public message: Message;
 
   constructor(
     private data: DataService,

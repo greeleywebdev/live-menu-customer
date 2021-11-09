@@ -3,7 +3,7 @@
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <ion-item>
+  <ion-item no-border>
     <ion-searchbar (ionChange)="search($event)"></ion-searchbar>
   </ion-item>
 
@@ -15,7 +15,7 @@
   </ion-segment>
 
   <div *ngFor="let section of shownMenu" menu>
-    <ion-label section-header color="primary" [hidden]="hideSections">{{section.name}}</ion-label>
-    <menu-item *ngIf="shownMenu" [menu]="section?.list"></menu-item>
+    <ion-label section-header color="primary" [hidden]="hideSections || section.hidden">{{section.name}}</ion-label>
+    <menu-item *ngIf="shownMenu" [menu]="section?.items"></menu-item>
   </div>
 </ion-content>
