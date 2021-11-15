@@ -4,7 +4,7 @@
   </ion-refresher>
 
   <ion-item no-border>
-    <ion-searchbar (ionChange)="search($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchValue" (ionChange)="search($event)"></ion-searchbar>
   </ion-item>
 
   <ion-segment (ionChange)="segmentChanged($event)" color="primary" mode="ios" scrollable="true"

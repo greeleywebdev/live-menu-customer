@@ -14,6 +14,7 @@ export class HomePage {
   shownMenu: any;
   defaultSegment: string;
   activeSegment: string;
+  searchValue: string;
   hideSections = false;
 
   constructor(private data: DataService, private titleService: Title, private route: ActivatedRoute) { }
@@ -26,6 +27,7 @@ export class HomePage {
   refresh(ev) {
     setTimeout(() => {
       ev.detail.complete();
+      this.ngOnInit();
     }, 3000);
   }
 
@@ -45,6 +47,7 @@ export class HomePage {
   }
 
   segmentChanged(ev: any): void {
+    this.clearSearchValue();
     this.activeSegment = ev.detail.value;
     for (var i in this.menu) {
       if (this.activeSegment === this.menu[i].name) {
@@ -74,9 +77,9 @@ export class HomePage {
   search(ev: any): void {
     const searchValue = ev.target.value.toLowerCase();
 
-    if (searchValue !== "") {
+    if (searchValue !== '') {
       this.hideSections = true;
-    } else if (searchValue === "") {
+    } else if (searchValue === '') {
       this.hideSections = false;
     }
 
@@ -99,6 +102,10 @@ export class HomePage {
         item.hidden = false;
       }
     });
+  }
+
+  clearSearchValue(): void {
+    this.searchValue = '';
   }
 
 }
