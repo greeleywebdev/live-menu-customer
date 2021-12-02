@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { ENDPOINTS } from '../models/endpoints';
+import { ActivatedRoute } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   merchantId: string;
   merchantLogo: string;
-  error = false;
+  hideMenuHeader = false;
 
   constructor(private httpClient: HttpClient) { }
 

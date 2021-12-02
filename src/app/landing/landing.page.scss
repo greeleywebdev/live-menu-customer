@@ -1,0 +1,25 @@
+ion-header {
+    ion-toolbar {
+        ion-title {
+            img {
+                width: 2.5rem;
+                border-radius: 8px;
+                margin-right: 12px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+ion-item {
+    --inner-padding-start: 0;
+    --inner-padding-end: 0;
+}
+
+ion-card {
+    max-width: 24rem;
+    position: absolute;
+    right: 16px;
+    margin-top: -186px;
+    z-index: 1;
+}

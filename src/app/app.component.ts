@@ -8,6 +8,15 @@ import { DataService } from './services/data.service';
 })
 export class AppComponent {
   
-  constructor(public data: DataService) { }
+  constructor(public data: DataService) {
+    this.getColors();
+  }
+
+  getColors(): void {
+    const primaryColor = '#DC4649';
+    const secondaryColor = '#2D2926';
+    const tertiaryColor = '#524F4C';
+    (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + primaryColor + "; --ion-color-secondary: " + secondaryColor + "; --ion-color-tertiary: " + tertiaryColor + ";";
+  }
 
 }

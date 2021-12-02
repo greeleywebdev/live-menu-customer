@@ -1,3 +1,15 @@
+[app-header] {
+    height: 12rem;
+    --background: var(--ion-color-primary);
+    --border-style: none;
+    text-align: center;
+    img {
+        margin-top: 2rem;
+        width: 8rem;
+        height: auto;
+    }
+}
+
 [menu] {
     margin-top: 16px;
 }

@@ -1,3 +1,9 @@
+<ion-header>
+  <ion-toolbar app-header>
+    <img src="{{data?.merchantLogo}}" alt="restaurant logo">
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
     <ion-refresher-content></ion-refresher-content>

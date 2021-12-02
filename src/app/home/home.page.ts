@@ -34,7 +34,7 @@ export class HomePage {
   getMenu(): Menu[] {
     return this.data.getFullMenu(this.data.merchantId).subscribe(data => {
       if (data) {
-        this.data.error = false;
+        this.data.hideMenuHeader = false;
       }
       this.titleService.setTitle('LiveMenu | ' + data.name);
       this.data.merchantLogo = data.logo;
@@ -45,6 +45,7 @@ export class HomePage {
       this.sectionIsEmpty();
     });
   }
+
 
   segmentChanged(ev: any): void {
     this.clearSearchValue();
