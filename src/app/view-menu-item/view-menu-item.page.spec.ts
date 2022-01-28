@@ -5,7 +5,7 @@ import { ViewMenuItemPageRoutingModule } from './view-menu-item-routing.module';
 
 import { ViewMenuItemPage } from './view-menu-item.page';
 
-describe('ViewMessagePage', () => {
+describe('ViewMenuItemPage', () => {
   let component: ViewMenuItemPage;
   let fixture: ComponentFixture<ViewMenuItemPage>;
 
