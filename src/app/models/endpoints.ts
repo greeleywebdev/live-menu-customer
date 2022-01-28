@@ -1,4 +1,4 @@
-const GATEWAY_URL = "http://0.0.0.0:80";
+const GATEWAY_URL = "https://livemenu-api-dev.azurewebsites.net";
 
 export const ENDPOINTS = {
     getFullMenu: GATEWAY_URL + '/merchants/'
