@@ -1,3 +1,5 @@
+const GATEWAY_URL = "https://livemenu-api-dev.azurewebsites.net";
+
 export const ENDPOINTS = {
-    getFullMenu: 'http://127.0.0.1:8000/merchants/'
+    getFullMenu: GATEWAY_URL + '/merchants/'
 }

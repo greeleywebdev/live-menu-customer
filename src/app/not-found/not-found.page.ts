@@ -12,7 +12,7 @@ export class NotFoundPage implements OnInit {
   constructor(public data: DataService) { }
 
   ngOnInit() {
-    this.data.error = true;
+    this.data.hideMenuHeader = true;
   }
 
 }

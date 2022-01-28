@@ -2,12 +2,14 @@
   font-family: "Arvo";
   font-size: 14pt;
   margin: 0;
+  // color: var(--secondary-color);
 }
 
 [subhead] {
   font-family: "Arvo";
   font-size: 13pt;
   margin-top: -6px;
+  // color: var(--tertiary-color)
 }
 
 [price] {
@@ -17,6 +19,7 @@
   float: right;
   margin-top: 8px;
   margin-right: 8px;
+  // color: var(--secondary-color);
 }
 
 [sub-category] {
@@ -24,11 +27,12 @@
   font-size: 11pt;
   padding-left: 6px;
   padding-right: 6px;
+  // color: var(--primary-color);
 }
 
 [description] {
   font-family: "Lato";
-  // color: $secondary;
+  // color: var(--tertiary-color);
   font-size: 11pt;
   margin-top: 4px;
 }
@@ -37,3 +41,5 @@
   color: rgba(151, 151, 151, 50);
   margin-top: 12px;
 }
+
+
