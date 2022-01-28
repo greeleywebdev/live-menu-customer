@@ -1,39 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      <img src="assets/liveMenu-icon.png" alt="LiveMenu Logo">
-      <ion-label>LiveMenu</ion-label>
-    </ion-title>
-    <ion-buttons slot="primary">
-      <ion-button fill="clear">
-        <ion-label>Login</ion-label>
-      </ion-button>
-      <ion-button fill="outline" shape="round" color="secondary">
-        <ion-label>Register</ion-label>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-grid>
-    <ion-col size="6" sizeSm="0">
-      <ion-item>
-        <img src="/assets/stock-photos/large_personScanning.jpg" alt="">
-      </ion-item>
-      <ion-card mode="ios">
-        <ion-card-header>
-          <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
-          <ion-card-title>Scan to View</ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          Customers can now scan your QR code to view a fully dynamic, mobile-friendly menu.
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col sizeSm="12">
-
-    </ion-col>
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios">
+          <img src="/assets/stock-photos/large_personScanning.jpg" />
+          <ion-card-header>
+            <ion-card-title>LiveMenu</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button fill="solid" expand="block">Register</ion-button>
+            <ion-button fill="outline" expand="block">Log In</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>

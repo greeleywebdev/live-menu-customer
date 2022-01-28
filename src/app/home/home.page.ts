@@ -17,7 +17,7 @@ export class HomePage {
   searchValue: string;
   hideSections = false;
 
-  constructor(private data: DataService, private titleService: Title, private route: ActivatedRoute) { }
+  constructor(public data: DataService, private titleService: Title, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.data.merchantId = this.route?.snapshot?.paramMap?.get('id');

@@ -13,10 +13,9 @@ export class AppComponent {
   }
 
   getColors(): void {
-    const primaryColor = '#DC4649';
-    const secondaryColor = '#2D2926';
-    const tertiaryColor = '#524F4C';
-    (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + primaryColor + "; --ion-color-secondary: " + secondaryColor + "; --ion-color-tertiary: " + tertiaryColor + ";";
+    this.data.getMerchantBranding().subscribe(data  => {
+      (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + data.primaryColor + "; --ion-color-secondary: " + data.secondaryColor + "; --ion-color-tertiary: " + data.tertiaryColor + ";";
+    });
   }
 
 }

@@ -1,3 +1,5 @@
+const GATEWAY_URL = "http://0.0.0.0:80";
+
 export const ENDPOINTS = {
-    getFullMenu: 'http://127.0.0.1:8000/merchants/'
+    getFullMenu: GATEWAY_URL + '/merchants/'
 }

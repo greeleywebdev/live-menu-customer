@@ -8,7 +8,7 @@ import { DataService } from '../services/data.service';
 })
 export class LandingPage implements OnInit {
 
-  constructor(private data: DataService) { }
+  constructor(public data: DataService) { }
 
   ngOnInit() {
     this.data.hideMenuHeader = true;

@@ -10,7 +10,7 @@ import { DataService } from '../services/data.service';
 export class ViewMenuItemPage implements OnInit {
 
   constructor(
-    private data: DataService,
+    public data: DataService,
     private activatedRoute: ActivatedRoute
   ) { }
 
