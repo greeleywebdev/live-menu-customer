@@ -21,7 +21,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClient,
     HttpClientModule
   ],
   exports: [
@@ -29,7 +28,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   providers: [
   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-  HttpClient,
   HttpClientModule
 ],
   bootstrap: [AppComponent],
