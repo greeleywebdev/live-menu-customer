@@ -12,13 +12,8 @@ describe('HomePage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-<<<<<<< Updated upstream
-      declarations: [ HomePage ],
-      imports: [IonicModule.forRoot(), MenuItemComponentModule, HttpClientModule,RouterModule.forRoot([])]
-=======
       declarations: [HomePage],
       imports: [IonicModule.forRoot(), MenuItemComponentModule, HttpClientModule, RouterModule.forRoot([])]
->>>>>>> Stashed changes
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomePage);
