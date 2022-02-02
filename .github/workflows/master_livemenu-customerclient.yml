@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'LiveMenu-CustomerClient'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F7A43F4CDC24DD89EE600D29B815A35 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EF83A3833DDA453EAE0CBD3F5A6AD046 }}
           package: .
