@@ -25,13 +25,17 @@ export class HomePage {
   }
 
   refresh(ev) {
-    setTimeout(() => {
+    // setTimeout(() => {
       ev.detail.complete();
       this.ngOnInit();
-    }, 3000);
+    // }, 3000);
   }
 
   getMenu(): Menu[] {
+    // Test bypass
+    if (this.data.merchantId == null) {
+      this.data.merchantId = '6189917c5cb1dd7c4aac10ed ';
+    }
     return this.data.getFullMenu(this.data.merchantId).subscribe(data => {
       if (data) {
         this.data.hideMenuHeader = false;
