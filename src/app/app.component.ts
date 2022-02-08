@@ -14,6 +14,7 @@ export class AppComponent {
 
   getColors(): void {
     this.data.getMerchantBranding().subscribe(data  => {
+      // Look into libraries for this!
       (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + data.primaryColor + "; --ion-color-secondary: " + data.secondaryColor + "; --ion-color-tertiary: " + data.tertiaryColor + ";";
     });
   }
