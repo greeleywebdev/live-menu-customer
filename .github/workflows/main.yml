@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure App Service
+name: Build and Deploy to Azure Container Instance
 
 env:
   APP_NAME: livemenu-customer
@@ -40,5 +40,5 @@ jobs:
           registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
           registry-username: ${{ secrets.REGISTRY_USERNAME }}
           registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-          name: aci-livemenu-api
+          name: aci-livemenu-customer
           location: 'east us'
