@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar app-header>
-    <img src="{{data?.merchantLogo}}" alt="restaurant logo">
+    <img *ngIf="data?.merchantLogo" src="{{data?.merchantLogo}}" alt="restaurant logo">
+    <h1 *ngIf="!data.merchantLogo" style="margin-top: 4rem;">{{merchant}}</h1>
   </ion-toolbar>
 </ion-header>
 
