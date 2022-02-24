@@ -14,3 +14,4 @@ www/css/*.css
 
 *.zip
 *.tar*
+*.sh
