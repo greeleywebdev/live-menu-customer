@@ -11,11 +11,10 @@
   </ion-refresher>
 
   <ion-item no-border>
-    <ion-searchbar [(ngModel)]="searchValue" (ionChange)="search($event)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchValue" (ionChange)="search($event)" mode="ios"></ion-searchbar>
   </ion-item>
 
-  <ion-segment (ionChange)="segmentChanged($event)" color="primary" mode="ios" scrollable="true"
-    value="{{defaultSegment}}">
+  <ion-segment (ionChange)="segmentChanged($event)" mode="ios" scrollable="true" value="{{defaultSegment}}">
     <ion-segment-button *ngFor="let category of menu" value="{{category.name}}">
       <ion-label>{{category.name}}</ion-label>
     </ion-segment-button>

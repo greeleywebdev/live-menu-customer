@@ -45,10 +45,11 @@ export class HomePage {
       this.merchant = data.name;
       this.data.merchantLogo = data.logo;
       this.menu = data.menu.categories;
-      this.defaultSegment = this.menu[1].name;
+      this.defaultSegment = this.menu[0].name;
       this.activeSegment = this.defaultSegment;
-      this.shownMenu = this.menu[1].sections;
+      this.shownMenu = this.menu[0].sections;
       this.sectionIsEmpty();
+      this.getColors();
     });
   }
 
@@ -119,6 +120,16 @@ export class HomePage {
     };
     this.searchValue = ev.target.value;
     this.search(ev);
+  }
+
+  getColors() {
+    if (this.data.merchantId === '621e4d25b83cd3c65f0f99ea') {
+      // Rhinegeist
+      (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + "#00263E";
+    } else if (this.data.merchantId === '6189917c5cb1dd7c4aac10ed') {
+      // Northern Row
+      (document.querySelector(':root') as HTMLElement).style.cssText = "--ion-color-primary: " + "#DC4649";
+    }
   }
 
 }
