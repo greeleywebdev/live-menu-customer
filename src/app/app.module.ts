@@ -28,8 +28,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   providers: [
   { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-  HttpClient
+  HttpClientModule
 ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

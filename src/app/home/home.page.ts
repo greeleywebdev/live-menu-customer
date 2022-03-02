@@ -11,6 +11,7 @@ import { DataService } from '../services/data.service';
 })
 export class HomePage {
   menu: any[];
+  merchant: string
   shownMenu: any;
   defaultSegment: string;
   activeSegment: string;
@@ -25,18 +26,23 @@ export class HomePage {
   }
 
   refresh(ev) {
-    setTimeout(() => {
-      ev.detail.complete();
-      this.ngOnInit();
-    }, 3000);
+    // setTimeout(() => {
+    ev.detail.complete();
+    this.ngOnInit();
+    // }, 3000);
   }
 
   getMenu(): Menu[] {
+    // Test bypass
+    if (this.data.merchantId == null) {
+      this.data.merchantId = '6189917c5cb1dd7c4aac10ed ';
+    }
     return this.data.getFullMenu(this.data.merchantId).subscribe(data => {
       if (data) {
         this.data.hideMenuHeader = false;
       }
       this.titleService.setTitle('LiveMenu | ' + data.name);
+      this.merchant = data.name;
       this.data.merchantLogo = data.logo;
       this.menu = data.menu.categories;
       this.defaultSegment = this.menu[0].name;
@@ -107,7 +113,13 @@ export class HomePage {
   }
 
   clearSearchValue(): void {
-    this.searchValue = '';
+    const ev = {
+      target: {
+        value: ''
+      }
+    };
+    this.searchValue = ev.target.value;
+    this.search(ev);
   }
 
   getColors() {

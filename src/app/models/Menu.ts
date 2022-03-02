@@ -1,25 +1,35 @@
 export interface Menu {
-    locationId: number;
-    categories: Array<Category>;
+    _id: string,
+    name: string,
+    logo: string,
+    address: Address,
+    menu: {
+        categories: Array<Category>
+    };
 }
 
+export interface Address {
+    street_number: number,
+    street_name: string,
+    city: string,
+    state: string,
+    zip_code: number
+}
 export interface Category {
-    categoryName: string;
-    categoryList: Array<Section>;
+    name: string;
+    sections: Array<Section>;
 }
 
 export interface Section {
-    section: string;
-    sectionList: Array<MenuItem>;
+    name: string;
+    items: Array<MenuItem>;
 }
 
 export interface MenuItem {
-    menuItemId: number;
-    header: string;
-    subHeader: string;
-    price: string;
-    subCategory1: string;
-    subCategory2: string;
-    description: string;
-    photoLocation: string;
+    name: string,
+    sub_head: string,
+    price: number,
+    attributes: Array<string>,
+    description: string,
+    is_active: boolean
 }
