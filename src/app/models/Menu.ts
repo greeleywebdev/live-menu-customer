@@ -2,6 +2,7 @@ export interface Menu {
     _id: string,
     name: string,
     logo: string,
+    color: string,
     address: Address,
     menu: {
         categories: Array<Category>
