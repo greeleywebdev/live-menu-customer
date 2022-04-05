@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { MenuItemComponent } from './menu-item.component';
 
-describe('MessageComponent', () => {
+describe('MenuItemComponent', () => {
   let component: MenuItemComponent;
   let fixture: ComponentFixture<MenuItemComponent>;
 
