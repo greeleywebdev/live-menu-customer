@@ -1,14 +1,37 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
-    frameworks: ['mocha', 'chai'],
-    files: ['test/**/*.js'],
-    reporters: ['progress'],
-    port: 9876,  // karma web server port
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      jasmine: {
+      },
+      clearContext: false
+    },
+    jasmineHtmlReporter: {
+      suppressAll: true
+    },
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage/ngv'),
+      subdir: '.',
+      reporters: [
+        { type: 'html' },
+        { type: 'text-summary' }
+      ]
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    browsers: ['ChromeHeadless'],
     autoWatch: false,
-    // singleRun: false, // Karma captures browsers, runs the tests and exits
-    concurrency: Infinity
-  })
-}
+    browsers: ['ChromeHeadless'],
+    singleRun: true,
+    restartOnFileChange: true
+  });
+};
